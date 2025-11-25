@@ -1,0 +1,80 @@
+/* bulb section start */
+
+.bulb_section {
+    width: 100%;
+    float: left;
+    background-color: #19191b;
+    height: auto;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.bulb_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #fefefd;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bulb_section_2 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-container, .result-container {
+    background-color: #2c2c2e;
+    color: #fefefd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.form-container .form-field {
+    margin-bottom: 20px;
+}
+
+.form-container .label, .result-container .result-label {
+    color: #fefefd;
+}
+
+.form-container .input-text, .form-container .js-input, .result-container .result-item {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.form-container .submit-btn {
+    background-color: #fcc92e;
+    color: #19191b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .submit-btn:hover {
+    background-color: #e0a800;
+}
+
+.result-box .results {
+    margin-top: 20px;
+}
+
+.result-box .result-item {
+    margin-bottom: 10px;
+}
+
+/* bulb section end */

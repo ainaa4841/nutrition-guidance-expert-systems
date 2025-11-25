@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Service</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/service.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+<body>
+<div class="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="login_bt">
+                    <ul>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
+<!-- header section end -->
+<!-- service section start -->
+<div class="section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="taital">Nutrition Form</h1>
+            </div>
+        </div>
+        <div class="section_2">
+            <div class="form-container">
+                <section class="get-in-touch">
+                    <form id="nutritionForm" class="nutri-form">
+                        <div class="form-field">
+                            <input id="age" class="input-text js-input" type="number" required>
+                            <label class="label" for="age">Age</label>
+                            <span class="error-message" id="age-error"></span>
+                        </div>
+                        <div class="form-field">
+                            <select id="gender" class="input-text js-input" required>
+                                <option value="" disabled selected>Choose gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <label class="label" for="gender">Gender</label>
+                            <span class="error-message" id="gender-error"></span>
+                        </div>
+                        <div class="form-field">
+                            <input id="height" class="input-text js-input" type="number" required>
+                            <label class="label" for="height">Height (cm)</label>
+                            <span class="error-message" id="height-error"></span>
+                        </div>
+                        <div class="form-field">
+                            <input id="weight" class="input-text js-input" type="number" required>
+                            <label class="label" for="weight">Weight (kg)</label>
+                            <span class="error-message" id="weight-error"></span>
+                        </div>
+                        <div class="form-field">
+                            <input id="exercise" class="input-text js-input" type="number" required>
+                            <label class="label" for="exercise">Frequent exercises in a week</label>
+                            <span class="error-message" id="exercise-error"></span>
+                        </div>
+                        <div class="form-field">
+                            <select id="symptom" class="input-text js-input">
+                              <option value="none">None</option>
+                                <option value="bleeding_gums">Bleeding gums</option>
+                                <option value="hair_loss">Hair loss</option>
+                                <option value="fatigue">Fatigue</option>
+                                <option value="vision_loss">Vision loss</option>
+                                <option value="canker_sore">Canker sore</option>
+                            </select>
+                            <label class="label" for="symptom">Symptom</label>
+                        </div>
+                        <div class="form-field align-center">
+                            <button type="button" class="submit-btn" onclick="calculate()">Calculate</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="result-container">
+                <div class="result-box">
+                    <h2>Recommendation Result</h2>
+                    <div id="results" class="results">
+                        <div class="result-item"><span class="result-label">BMI:</span> <span id="bmi-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Body Status:</span> <span id="body-status-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Calories:</span> <span id="calories-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Suggested Carbohydrates:</span> <span id="carbohydrates-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Suggested Protein:</span> <span id="protein-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Possible Deficiency:</span> <span id="deficiency-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Possible Illness:</span> <span id="illness-output">N/A</span></div>
+                        <div class="result-item"><span class="result-label">Deficiency Consumption:</span> <span id="deficiency-consumption-output">N/A</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main section end -->
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/plugin.js"></script>
+<!-- sidebar -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="service.js"></script>
+<!-- javascript -->
+</body>
+</html>
+
+<style>
+/* bulb section start */
+
+.result-container.result-box h2{
+   margin-bottom: 30px;
+   font-weight: bold;
+
+}
+.section {
+    width: 100%;
+    float: left;
+    margin-top: 1px;
+    height: auto;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.taital {
+    width: 100%;
+    height: 20px;
+    float: left;
+    font-size: 30px;
+    color: #fefefd;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1px;
+    margin-bottom: 2px;
+    font-weight: bold;
+
+}
+
+.section_2 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-container, .result-container {
+    background-color: #f1f1e9;
+    color: #101010;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(41, 39, 39, 0.5);
+    width: 48%;
+    margin-bottom: 1px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container .form-field {
+    margin-bottom: 1px;
+    margin-bottom: 1px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.form-container .label, .result-container .result-label {
+    color: black;
+    text-align: center;
+}
+
+.form-container .input-text, .form-container .js-input, .result-container .result-item {
+    width: 100%;
+    max-width: 100%; /* Set a fixed max width */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    position: relative;
+    max-height: 50px;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.form-container select.input-text.js-input {
+    width: 100%;
+    max-width: 5px;
+    text-align: center; /* Set a fixed max width for select */
+}
+
+.form-container #gender, .form-container #symptom {
+    max-width: 300px; /* Adjust this value as needed */
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.form-container .submit-btn {
+    background-color: #fcc92e;
+    color: #19191b;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-container .submit-btn:hover {
+    background-color: #e0a800;
+}
+
+.result-box .results {
+    margin-top: 20px;
+    
+}
+
+.result-box .result-item {
+    margin-bottom: 10px;
+}
+
+.result-container.result-box h2 {
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.75em;
+    display: none;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.nutri-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    background-color: #f7f7f1;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.form-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    margin-top: -3px;
+    text-align: center;
+
+}
+
+.select.input-text.js-input {
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+     /* Ensure select box is same width as inputs */
+}
+
+/* bulb section end */
+</style>
+<script src="js/service.js"></script>
